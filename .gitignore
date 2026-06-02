@@ -2,34 +2,30 @@
 .env
 .env.*
 !.env.example
-*.key
 *.pem
-*.pfx
+*.key
 *.crt
 tokens.json
 secrets.json
-
-# Backups and databases
-*.sql
-*.dump
-*.bak
-*.backup
-*.tar
-*.tar.gz
-*.zip
 
 # Logs
 *.log
 logs/
 
+# Backups
+*.bak
+*.backup
+*.sql
+*.dump
+*.zip
+*.7z
+*.rar
+
 # Python
 __pycache__/
-*.py[cod]
 .venv/
 venv/
-
-# PowerShell temporary files
-*.ps1xml
+*.pyc
 
 # OS/IDE
 .DS_Store
