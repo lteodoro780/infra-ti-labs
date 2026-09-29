@@ -17,10 +17,9 @@ Cada pasta representa uma área testada de verdade — não são tutoriais copia
 | `zabbix/` | API, host.get, grupos de hosts, triggers |
 | `ocs-inventory/` | Apache, banco de dados, troubleshooting |
 | `ia-local/` | Sentinela, Ollama, Open WebUI e RAG |
-| `embarcados/` | TV Box Linux e Yocto RK322x |
+| `embarcados/` | Build de imagem Yocto para RK322x |
 | `virtualizacao/xcp-ng/` | Virtualização offline com XCP-ng |
 | `automacao/` | Scripts de automação de infraestrutura |
-| `projetos/` | Projeto educacional de reaproveitamento de TV Box |
 
 ## Sobre os dados
 
@@ -40,3 +39,4 @@ zabbix.example.local
 ## Licença
 
 MIT — veja [LICENSE](LICENSE).
+
