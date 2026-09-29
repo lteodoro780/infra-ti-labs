@@ -1,35 +1,42 @@
-# Infra TI Labs — Content Pack
+﻿# Infra TI Labs
 
-Este pacote adiciona documentações práticas ao repositório `infra-ti-labs`.
+[#infra-ti-labs](#infra-ti-labs)
 
-A proposta é registrar aprendizados reais de infraestrutura de TI de forma sanitizada, sem expor:
-- IPs reais;
-- senhas;
-- tokens;
-- nomes internos de servidores;
-- dados institucionais;
-- logs brutos sensíveis;
-- prints com informações internas.
+Laboratórios práticos e documentação sanitizada sobre infraestrutura de TI: Linux, Windows Server, redes, monitoramento, ITSM e IA local aplicada a suporte técnico.
 
-Use sempre exemplos fictícios como:
+Cada pasta representa uma área testada de verdade — não são tutoriais copiados, são anotações de configurações que rodei e documentei.
 
-```text
+## Conteúdo por área
+
+| Pasta | Conteúdo |
+|---|---|
+| `linux/` | SSH, Docker, Debian Server |
+| `windows-server/` | Active Directory, GPO, PowerShell |
+| `redes/` | Diagnóstico, traceroute, descoberta de hosts |
+| `glpi/` | Integração LDAP, API, gestão de chamados |
+| `zabbix/` | API, host.get, grupos de hosts, triggers |
+| `ocs-inventory/` | Apache, banco de dados, troubleshooting |
+| `ia-local/` | Sentinela, Ollama, Open WebUI e RAG |
+| `embarcados/` | TV Box Linux e Yocto RK322x |
+| `virtualizacao/xcp-ng/` | Virtualização offline com XCP-ng |
+| `automacao/` | Scripts de automação de infraestrutura |
+| `projetos/` | Projeto educacional de reaproveitamento de TV Box |
+
+## Sobre os dados
+
+Todo o conteúdo é sanitizado antes da publicação — nenhum IP real, senha, token, nome interno de servidor, log bruto ou print com dados institucionais é incluído.
+
+Exemplos usam sempre placeholders fictícios:
 server01.local
 glpi.example.local
 zabbix.example.local
-192.168.100.10
-10.0.0.10
-```
+162.135.0.10
 
-## Conteúdos adicionados
+## Documentação adicional
 
-- Linux: SSH, Docker, Debian Server;
-- Windows Server: AD, GPO, PowerShell;
-- Redes: diagnóstico, traceroute, descoberta de hosts;
-- GLPI: LDAP, API, chamados;
-- Zabbix: API, host.get, grupos, triggers;
-- OCS Inventory: Apache, banco e troubleshooting;
-- IA local: Sentinela, Ollama, Open WebUI e RAG;
-- Embarcados: TV Box Linux e Yocto RK322x;
-- Virtualização: XCP-ng offline;
-- Projeto educacional com reaproveitamento de TV Box.
+- [CHANGELOG](CHANGELOG.md) — histórico de mudanças no repositório
+- [SECURITY](SECURITY.md) — política de divulgação de vulnerabilidades
+
+## Licença
+
+MIT — veja [LICENSE](LICENSE).
