@@ -1,6 +1,6 @@
-# Docker Permission Denied
+﻿# Docker Permission Denied
 
-Erro comum:
+## Sintoma
 
 ```text
 permission denied while trying to connect to the Docker daemon socket
@@ -15,21 +15,25 @@ O usuário atual não pertence ao grupo `docker` ou o serviço Docker não está
 ```bash
 sudo usermod -aG docker $USER
 newgrp docker
-```
-
-Teste:
-
-```bash
 docker ps
 ```
 
-Se ainda falhar, verifique o serviço:
+Se não funcionar, faça logout/login ou reinicie a sessão.
+
+## Verificar socket
+
+```bash
+ls -l /var/run/docker.sock
+```
+
+## Verificar serviço
 
 ```bash
 sudo systemctl status docker
+sudo systemctl enable docker
 sudo systemctl restart docker
 ```
 
-## Observação
+## Observação de segurança
 
-Adicionar o usuário ao grupo `docker` concede permissões elevadas. Use apenas em máquinas confiáveis.
+Usuários no grupo `docker` possuem privilégios equivalentes a root em muitos cenários. Use apenas em máquinas confiáveis.
