@@ -1,20 +1,43 @@
-# Deploy TightVNC via GPO
+﻿# Deploy do TightVNC via GPO
 
 Guia sanitizado para instalação do TightVNC via GPO.
 
-## Ideia geral
+## Objetivo
 
-1. Baixar MSI oficial.
-2. Colocar o instalador em um compartilhamento acessível por computadores do domínio.
-3. Criar GPO de instalação de software.
-4. Aplicar parâmetros de senha e configuração via registro ou MST.
-5. Testar em uma OU pequena antes de aplicar em produção.
+Instalar o TightVNC em máquinas do domínio usando GPO e já aplicar configuração padrão.
 
-## Caminho exemplo
+## Boas práticas
+
+- Usar MSI oficial em compartilhamento acessível por computadores do domínio;
+- Colocar o pacote no `SYSVOL` ou share dedicado;
+- Dar permissão de leitura para `Domain Computers` ou `Authenticated Users`;
+- Testar em uma OU pequena antes de aplicar em produção.
+
+## Caminho de exemplo
 
 ```text
 \\dominio.local\SYSVOL\dominio.local\scripts\TightVNC\tightvnc.msi
 ```
+
+## Configuração da GPO
+
+```text
+Computer Configuration
+  Policies
+    Software Settings
+      Software installation
+```
+
+Adicionar pacote como `Assigned`.
+
+## Senha/configuração
+
+O MSI instala o programa, mas nem sempre aplica senha automaticamente. Opções comuns:
+
+1. Usar transform `.mst`;
+2. Aplicar chave de registro depois da instalação;
+3. Usar script pós-instalação;
+4. Usar ferramenta oficial de configuração silenciosa, quando disponível.
 
 ## Validação no cliente
 
@@ -23,8 +46,15 @@ gpupdate /force
 gpresult /r
 ```
 
-## Observações
+Logs:
 
-- Use ambientes de teste.
-- Não publique senhas VNC em scripts públicos.
-- Prefira exemplos sanitizados no GitHub.
+```text
+Event Viewer > Application
+Event Viewer > System
+```
+
+## Segurança
+
+- Use ambientes de teste antes de aplicar em produção.
+- Nunca publique senha real de VNC em repositório público.
+- Prefira sempre exemplos sanitizados no GitHub.
