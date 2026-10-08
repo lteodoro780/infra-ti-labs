@@ -1,4 +1,4 @@
-﻿# Infra TI Labs
+# Infra TI Labs
 
 [#infra-ti-labs](#infra-ti-labs)
 
@@ -25,14 +25,15 @@ Cada pasta representa uma área testada de verdade — não são tutoriais copia
 
 Todo o conteúdo é sanitizado antes da publicação — nenhum IP real, senha, token, nome interno de servidor, log bruto ou print com dados institucionais é incluído.
 
-Exemplos usam sempre placeholders fictícios:
+Exemplos usam sempre placeholders fictícios (IPs na faixa reservada para documentação, RFC 5737, ou em redes privadas):
 server01.local
 glpi.example.local
 zabbix.example.local
-162.135.0.10
+192.0.2.10
 
 ## Documentação adicional
 
+- [Guia de sanitização](docs/guia-sanitizacao.md) — como revisar um material antes de publicar
 - [CHANGELOG](CHANGELOG.md) — histórico de mudanças no repositório
 - [SECURITY](SECURITY.md) — política de divulgação de vulnerabilidades
 
