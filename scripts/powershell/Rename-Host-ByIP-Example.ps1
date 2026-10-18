@@ -8,7 +8,7 @@ Teste em laboratório antes de usar em produção.
 
 $Prefix = "lab-pc-"
 $Interface = Get-NetIPAddress -AddressFamily IPv4 |
-    Where-Object { $_.IPAddress -like "192.168.100.*" } |
+    Where-Object { $_.IPAddress -like "192.0.2.*" } |
     Select-Object -First 1
 
 if (-not $Interface) {

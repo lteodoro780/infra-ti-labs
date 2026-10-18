@@ -18,7 +18,7 @@ Use valores genéricos:
 
 ```text
 server01.local
-192.168.100.10
+192.0.2.10
 glpi.example.local
 zabbix.example.local
 usuario.exemplo

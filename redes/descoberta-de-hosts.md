@@ -4,7 +4,7 @@
 
 ```bash
 for i in $(seq 1 254); do
-  ping -c 1 -W 1 192.168.100.$i | grep "64 bytes" &
+  ping -c 1 -W 1 192.0.2.$i | grep "64 bytes" &
 done
 wait
 ```
@@ -12,14 +12,14 @@ wait
 ## Ping sweep com nmap
 
 ```bash
-nmap -sn 192.168.100.0/24
+nmap -sn 192.0.2.0/24
 ```
 
 ## Ver portas comuns
 
 ```bash
-nmap -p 22,80,443,3389,8080 192.168.100.0/24
-nmap -sV 192.168.100.10
+nmap -p 22,80,443,3389,8080 192.0.2.0/24
+nmap -sV 192.0.2.10
 ```
 
 ## ARP local

@@ -44,7 +44,7 @@ sudo ss -tulpn | grep :22
 ## 5. Testar conexão com debug
 
 ```bash
-ssh -v usuario@192.168.100.10
+ssh -v usuario@192.0.2.10
 ```
 
 ## 6. Conferir configuração

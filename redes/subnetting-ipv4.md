@@ -23,26 +23,26 @@ Quantidade de hosts por sub-rede:
 ## Exemplo /24
 
 ```text
-Rede: 192.168.100.0/24
+Rede: 192.0.2.0/24
 Máscara: 255.255.255.0
-Hosts válidos: 192.168.100.1 até 192.168.100.254
-Broadcast: 192.168.100.255
+Hosts válidos: 192.0.2.1 até 192.0.2.254
+Broadcast: 192.0.2.255
 ```
 
 ## Exemplo /25 (duas sub-redes)
 
 ```text
-Rede 1: 192.168.100.0/25
-Hosts: 192.168.100.1 até 192.168.100.126
-Broadcast: 192.168.100.127
+Rede 1: 192.0.2.0/25
+Hosts: 192.0.2.1 até 192.0.2.126
+Broadcast: 192.0.2.127
 
-Rede 2: 192.168.100.128/25
-Hosts: 192.168.100.129 até 192.168.100.254
-Broadcast: 192.168.100.255
+Rede 2: 192.0.2.128/25
+Hosts: 192.0.2.129 até 192.0.2.254
+Broadcast: 192.0.2.255
 ```
 
 ## Comando útil
 
 ```bash
-ipcalc 192.168.100.0/24
+ipcalc 192.0.2.0/24
 ```
