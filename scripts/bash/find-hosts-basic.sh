@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-NETWORK="${1:-192.168.100.0/24}"
+NETWORK="${1:-192.0.2.0/24}"
 
 echo "Varredura ping em: $NETWORK"
 echo "Use apenas em redes autorizadas."

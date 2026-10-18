@@ -20,12 +20,14 @@ Antes de subir qualquer arquivo para o GitHub, revise:
 
 | Real | Exemplo público |
 |---|---|
-| IP interno | `192.168.100.10` |
+| IP interno | `192.0.2.10` |
 | Servidor real | `server01.local` |
 | GLPI real | `glpi.example.local` |
 | Zabbix real | `zabbix.example.local` |
 | Usuário real | `usuario.exemplo` |
 | Token real | `troque_este_valor` |
+
+Os endereços de exemplo usam a faixa `192.0.2.0/24`, reservada para documentação pela RFC 5737: ela nunca aparece numa rede real, então não há risco de confundir um exemplo com um endereço interno.
 
 ## Comando de revisão
 

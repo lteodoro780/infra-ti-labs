@@ -23,15 +23,15 @@ route print
 Linux:
 
 ```bash
-traceroute 192.168.100.10
-tracepath 192.168.100.10
+traceroute 192.0.2.10
+tracepath 192.0.2.10
 ```
 
 Windows:
 
 ```cmd
-tracert 192.168.100.10
-pathping 192.168.100.10
+tracert 192.0.2.10
+pathping 192.0.2.10
 ```
 
 ## Ver gateway
